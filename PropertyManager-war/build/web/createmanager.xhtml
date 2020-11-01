@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>manager</title>
+    </h:head>
+    <h:body>
+        <h2>Create a Manager</h2>
+        <h:form>
+            <p></p>
+            Manager Name <h:inputTextarea value="#{manBean.name}"/>
+            <p></p>
+            Manager Phone <h:inputText value="#{manBean.phone}"/>
+            <p></p>
+            Manager Address <h:inputText value="#{manBean.address}"/>
+            <p></p>
+            <h:commandButton label="Create Manager" value="Create" action="#{manBean.createManager()}"/>
+            <p></p>
+            <h:outputText value="${manBean.feedback}"/>
+            <p></p>
+            <h:commandLink value="Menu" action="menu"/>
+            <p></p>
+        </h:form>
+    </h:body>
+</html>
+

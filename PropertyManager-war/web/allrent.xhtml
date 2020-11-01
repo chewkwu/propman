@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>All Rent</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:dataTable value="#{menuBeans.allRentals}" var="property" border="2"
+			cellspacing="1" cellpadding="1">
+			
+				<c:facet name="header">ID</c:facet>
+                    #{property.id}
+                
+			<h:column>
+				<c:facet name="header">Type</c:facet>
+                    #{property.type}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Address</c:facet>
+                    #{property.address}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Sale Price</c:facet>
+                    #{property.weeklyRent}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Manager ID</c:facet>
+                    #{property.manager.id}
+                </h:column>
+		</h:dataTable>
+            <p></p>
+            <h:commandLink value="Create a new Rent Property" action="createrent"/>
+            <p></p>
+            <h:commandLink value="Main Page" action="menu"/>
+            <p></p>
+            <hr/>
+	</h:form>
+    </h:body>
+</html>
+

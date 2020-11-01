@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>All Managers</title>
+    </h:head>
+    <h:body>
+         <h:form>
+             <h:dataTable value="#{menuBeans.allManagers}" var="man" border="2"
+			cellspacing="1" cellpadding="1">
+			
+				<c:facet name="header">Manager ID</c:facet>
+                    #{man.id}
+                
+			<h:column>
+				<c:facet name="header">Name</c:facet>
+                    #{man.name}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Address</c:facet>
+                    #{man.address}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Phone</c:facet>
+                    #{man.phone}
+                        </h:column>
+		</h:dataTable>
+            <p></p>
+            <h:commandLink value="Create a new Manager" action="createmanager"/>
+            <p></p>
+            <h:commandLink value="Main Page" action="menu"/>
+            <p></p>
+            <hr/>
+	</h:form>
+    </h:body>
+</html>
+

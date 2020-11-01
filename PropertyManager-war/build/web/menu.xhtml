@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Menu</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <h1>Real Estate Property E-Business System</h1>
+        <p></p>
+        <h2>Property Management</h2>
+        <p></p>
+        <h:commandLink value="Create a Sale Property" action="createsale"/>
+        <p></p>
+        <h:commandLink value="List all Sale Properties" action="#{menuBeans.allSaleProps()}"/>
+        <p></p>
+        <h:commandLink value="Search a Sale Property" action="searchsale"/>
+        <p></p>
+        <h:commandLink value="Remove a Sale Property" action="removesale"/>
+        <p></p>
+        <h:commandLink value="Create a Rent Property" action="createrent"/>
+        <p></p>
+        <h:commandLink value="List all Rent Properties" action="#{menuBeans.allRentProperties()}"/>
+        <p></p>
+        <h:commandLink value="Search a Rent Property" action="searchrent"/>
+        <p></p>
+        <h:commandLink value="Remove a Rent Property" action="removerent"/>
+        <p></p>
+        <h2>Property Manager</h2>
+        <p></p>
+        <h:commandLink value="Create a Property Manager" action="createmanager"/>
+        <p></p>
+        <h:commandLink value="List all Property Mangers" action="#{menuBeans.allManager()}"/>
+        <p></p>
+        <h:commandLink value="Search a Property Manager" action="searchmanager"/>
+        <p></p>
+        <h2>Allocation Management</h2>
+        <p></p>
+        <h:commandLink value="Create an Allocation" action="createallocation"/>
+        <p></p>
+        <h:commandLink value="List all Allocations" action="#{menuBeans.allAllocation()}"/>
+        <p></p>
+        <h:commandLink value="Search an Allocation" action="searchallocation"/>
+        <p></p>
+        <hr></hr>
+        </h:form>
+    </h:body>
+</html>
+
